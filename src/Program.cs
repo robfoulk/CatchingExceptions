@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices.ComTypes;
+
+//Source found at ...
+//https://github.com/robfoulk/CatchingExceptions/
 
 namespace CatchingExceptions {
     class Program {
