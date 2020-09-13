@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 
 //Source found at ...
 //https://github.com/robfoulk/CatchingExceptions/
@@ -17,7 +18,7 @@ namespace CatchingExceptions {
             Console.Write("Enter CustomerId (####): ");
             string customerEntry = Console.ReadLine();
             int customerId = int.Parse(customerEntry);
- 
+
             orderHistory = data.GetHistory(customerId);
 
             Console.WriteLine();
@@ -34,10 +35,10 @@ namespace CatchingExceptions {
 #region DemoInfrastructure
 
 namespace CatchingExceptions {
-    using System.Data.SqlClient;
-    using System.Runtime.Serialization;
-    using System.Linq;
     using System.Collections.Generic;
+    using System.Data.SqlClient;
+    using System.Linq;
+    using System.Runtime.Serialization;
 
     class DataComponent {
         public bool UseCache { get; set; }
